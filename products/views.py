@@ -9,6 +9,14 @@ from .serializers import ItemSerializer
 '''
 NOTE: Conside this as a reference and follow this same coding structure or format to work on you tasks
 '''
+class MenuView(APIView):
+    def get(self,request):
+        menu = [
+            {"name":"Paneer Butter Masala","description":"Creamy cottage cheese curry","price":150},
+            {"name":"Veg Biryani","description":"Spicy mixed vegatable rice","price":120},
+            {"name":"Gulab Jamun","description":"Sweet dessert","price":50}
+        ]
+        return Response(menu,status=status.HTTP_200_OK)
 
 # Create your views here.
 class ItemView(APIView):
