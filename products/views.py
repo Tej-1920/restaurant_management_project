@@ -18,6 +18,11 @@ class MenuView(APIView):
         ]
         return Response(menu,status=status.HTTP_200_OK)
 
+def show_menu(request):
+    response=request.get('http://127.0.0.1:8000/api/menu/')
+    menu = response.json()
+    return render(request,'menu.html',{'menu':menu})
+
 # Create your views here.
 class ItemView(APIView):
 
