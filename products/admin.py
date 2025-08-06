@@ -11,3 +11,4 @@ class ItemAdmin(admin.ModelAdmin):
 admin.site.register(Item,ItemAdmin)
 admin.site.register(Menu)
 admin.site.register(Order)
+admin.site.register(MenuItem)
