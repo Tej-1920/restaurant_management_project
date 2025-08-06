@@ -5,7 +5,7 @@ from rest_framework import status
 
 from .models import Item
 from .serializers import ItemSerializer
-from .models import MenuView
+from .models import MenuItem
 '''
 NOTE: Conside this as a reference and follow this same coding structure or format to work on you tasks
 '''
@@ -39,4 +39,5 @@ class ItemView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 def menu_view(request):
-    items=M
+    items=MenuItem.objects.all()
+    return render(request,'products/menu.html',{'items':items})
