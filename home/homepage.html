@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Our Restaurant</h2>
+        <p><strong>Address:</strong>{{ restaurant.address }}</p>
+        {% if restaurant.latitude and restaurant.longitude %}
+        <h3>Find Us here :</h3>
+        <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https:/www.google.com/maps?q={{restaurant.latitude}},{{restaurant.longitude}}&output=embed">
+        </iframe>
+        {% endif %}
+    </body>
+</html>
