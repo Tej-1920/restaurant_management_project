@@ -5,7 +5,7 @@ from rest_framework import status
 
 from .models import Item
 from .serializers import ItemSerializer
-
+from .models import MenuView
 '''
 NOTE: Conside this as a reference and follow this same coding structure or format to work on you tasks
 '''
@@ -37,3 +37,6 @@ class ItemView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+def menu_view(request):
+    items=M
