@@ -2,6 +2,9 @@ from django.shortcuts import render,redirect
 from .forms import ContactForm
 
 # Create your views here.
+
+def homepage(request):
+    restaurent=
 def contact_us(request):
     if request.method=='POST':
         form=ContactForm(request.POST)
