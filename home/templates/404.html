@@ -15,11 +15,13 @@
             }
             .container{
             margin-top:10%;
+            padding:20px;
             }
             h1{
             font-size:5rem;
             color:#2e7d32;
             margin-bottom:10px;
+            text-shadow:2px 2px 6px rgba(0,0,0,0.1);
             }
             p{
             font-size:1.2rem;
@@ -31,12 +33,16 @@
             background-color: #2e7d32;
             color:white;
             padding:6px;
+            font-size:1rem;
+            font-weight:bold;
             text-decoration:none;
             border-radius:6px;
             transition:background-color 0.3s ease;
             }
             a:hover{
             background-color:#256429;
+            transform:scale(1.05);
+            box-shadow:0px 6px 12px rgba(0,0,0,0.15);
             }
         </style>
     </head>
@@ -44,7 +50,7 @@
         <div class="container">
             <h1>404</h1>
             <p>Oops! The page you are looking for doesnt exist.</p>
-            <a href="{% url 'home%}">Go Back Home</a>
+            <a href="{% url 'home' %}">Go Back Home</a>
         </div>
     </body>
 </html>
