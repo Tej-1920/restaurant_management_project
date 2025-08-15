@@ -24,3 +24,6 @@ def contact_us(request):
 def home_view(request):
     restaurant_name=settings.RESTAURANT_NAME
     return render(request,'home/home.html',{'restaurant_name':restaurant_name})
+
+def about_us(request):
+    return render(request,'about_us.html')
