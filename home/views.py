@@ -28,3 +28,7 @@ def home_view(request):
 
 def about_us(request):
     return render(request,'about_us.html')
+
+def home(request):
+    phone_number=settings.RESTAURANT_PHONE_NUMBER
+    return render(request,'home/homepage.html',{'phone_number':phone_number})
