@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
+from rest_framework.decorators import api_view
 from .models import Item
 from .serializers import ItemSerializer , MenuItemSerializer
 from .models import MenuItem
@@ -42,4 +42,11 @@ class ItemView(APIView):
 def menu_view(request):
     items=MenuItem.objects.all()
     return render(request,'products/menu.html',{'items':items})
+
+@api_view(['GET'])
+def display_menu(request):
+    items=MenuItem.objects.all()
+    serializer=MenuItemSerializer(items,many=True)
+    return Response(serializer.data,status=status.HTTP_200_OK)
+    
 
