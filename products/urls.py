@@ -6,4 +6,5 @@ urlpatterns = [
     path('menu/',MenuView.as_view()),
     path('',show_menu,menu='show_menu'),
     path('menus/',menu_view,name=menu),
+    path('menuitems/',display)
 ]
