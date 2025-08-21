@@ -8,4 +8,5 @@ class ItemSerializer(serializers.ModelSerializer):
 
 class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model=
+        model=MenuItem
+        fields='__all__'
