@@ -57,6 +57,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'restaurant_management.urls'
 RESTAURANT_NAME = 'Karna\'s Restaurant'
+RESTAURANT_PHONE_NUMBER = '9000200020'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
