@@ -20,7 +20,10 @@ def contact_us(request):
             return redirect('contact_us')
     else:
         form=ContactForm()
-    return render(request,'home/contact_us.html',{'form':form})
+    restaurant_name=settings.RESTAURANT_NAME
+    phone_number=settings.RESTAURANT_PHONE_NUMBER
+    year=datetime.now().year
+    return render(request,'home/contact_us.html',{'form':form , 'restaurant_name':restaurant_name ,'phone_number':phone_number,'year':year})
 
 def home_view(request):
     restaurant_name=settings.RESTAURANT_NAME
