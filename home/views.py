@@ -32,5 +32,7 @@ def about_us(request):
     return render(request,'about_us.html')
 
 def home(request):
+    restaurant_name=settings.RESTAURANT_NAME
     phone_number=settings.RESTAURANT_PHONE_NUMBER
-    return render(request,'home/homepage.html',{'phone_number':phone_number})
+    year=datetime.now().year
+    return render(request,'home/homepage.html',{'restaurant_name':restaurant_name,'phone_number':phone_number,'year':year})
