@@ -2,13 +2,25 @@
 <html>
     <head>
         <title>Our Restaurant</title>
+
         <style>
+
             body{
             font-family:Times new roman;
             background-color: #f9f9f9;
             margin:0;
             padding:0;
             color:#333;
+            }
+            header{
+            text-align:center;
+            padding:20px;
+            background-bottom:2px solid #eee;
+            }
+            header img{
+            max-width:200px;
+            height:auto;
+            margin-bottom:10px;
             }
             h2{
             text-align:center;
@@ -37,6 +49,9 @@
     </head>
 
     <body>
+        <header>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.canva.com%2Ftemplates%2Frestaurant%2F&psig=AOvVaw1OVZP3YEKexScXZo2buIEb&ust=1756654710204000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLjUr_fuso8DFQAAAAAdAAAAABAM" alt="Restaurant Logo">
+        </header>
         <h2>Our Restaurant</h2>
         <p><strong>Address:</strong>{{ restaurant.address }}</p>
         {% if restaurant.latitude and restaurant.longitude %}
